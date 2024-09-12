@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLICATION PROCESS</title>
+    <style>
+        .loader {
+            width: 56px;
+            height: 56px;
+            display: grid;
+            border: 4.6px solid #0000;
+            border-radius: 100%;
+            border-color: #008cff #0000;
+            animation: spinner-e04l1k 1.5s infinite linear;
+            align: center;
+            margin-left: 40%;
+           margin-top: 25%; 
+        }
+
+        .loader::before, .loader::after {
+            content: "";
+            grid-area: 1/1;
+            margin: 8px;
+            border: inherit;
+            border-radius: 50%;
+        }
+
+        .loader::before {
+            border-color: #048be6 #0000;
+            animation: inherit;
+            animation-duration: 0.1s;
+        }
+
+        .loader::after {
+            margin: 2.9px;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        @keyframes spinner-e04l1k {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .loader {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="text">APPLICATION IN PROGRESS, PLEASE WAIT PATIENTLY</div>
+</body>
+</html>

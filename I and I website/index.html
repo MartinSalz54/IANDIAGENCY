@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Team Section Using HTML and CSS</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Exo+2|Yatra+One');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        body {
+            background:  rgb(12, 12, 71);
+        }
+
+        .wrapper {
+            margin-top: 80px;
+            text-align: center;
+          
+            
+        }
+
+        .wrapper h1 {
+            font-family: 'Yatra One', cursive;
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 25px;
+            
+            
+        }
+
+        .our_team {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: -10px;
+          
+        }
+
+        .our_team .team_member {
+            width: 250px;
+            margin: 5px;
+            background: #fff;
+            padding: 20px 10px;
+            background-color: cyan;
+        }
+
+        .our_team .team_member .member_img {
+            background: #e9e5fa;
+            max-width: 190px;
+            width: 100%;
+            height: 190px;
+            margin: 0 auto;
+            border-radius: 50%;
+            padding: 5px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .our_team .team_member .member_img img {
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            border-radius: 50%;
+        }
+
+        .our_team .team_member h3 {
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: 2px;
+            margin: 15px 0 0px;
+        }
+
+        .our_team .team_member span {
+            font-size: 10px;
+            
+        }
+
+        .our_team .team_member p {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .our_team .team_member .member_img .social_media {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background: blue;
+            width: 95%;
+            height: 95%;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0);
+            transition: all 0.5s ease;
+        }
+
+        .our_team .team_member .member_img .social_media .item {
+            margin: 0 10px;
+        }
+
+        .our_team .team_member .member_img .social_media .fab {
+            color: #8c7ae6;
+            font-size: 20px;
+        }
+
+        .text {
+            color: white;
+        }
+
+        nav {
+            background-color: #3c2bd4;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-left: 30px;
+        }
+
+        .navbar li:last-child {
+            margin-right: 0;
+            
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .navbar b {
+            margin-left: 20px;
+        }
+
+        .navbar-second {
+            background-color: rgb(7, 7, 101);
+            padding: 10px;
+            margin-left: 10px;
+          
+        }
+
+        .navbar-second li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 25px;
+            color: cyan;
+            
+        }
+
+        .navbar-second li:last-child {
+            margin-right: 0;
+            color: black;
+            color: cyan;
+        }
+
+        .navbar-second a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            color: cyan;
+        }
+
+        .my-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgb(12, 12, 71);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 40px;
+            height: 80px;
+            border-color: green;
+        }
+
+        .image-container {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            margin-top: 10%;
+            border-radius: 60px;
+        }
+
+        .image-container img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 1300px;
+            height: 520px;
+            z-index: -1;
+            transition: transform 0.3s ease-in-out;
+           
+        }
+      
+       
+    </style>
+</head>
+
+<body onload="startImageRotation()">
+
+    <!-- Second Navbar -->
+    <nav class="navbar-second">
+        <ul class="navbar">
+            <li><a href="#"><img src="I AND I LOGO.jpeg" alt="GAFCSC Logo" style="width: 40px;"><b>MEDIA AGENCY</b></a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="todo.html">OUR AIM</a></li>
+            <li><a href="services.html">OUR SERVICES</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="contact.html" class="my-button">BOOK AN APPOINTMENT</a>
+    </nav>
+    <div class="image-container">
+        <img id="TopImage" src="I&I TOP.jpeg" alt="Background Image">
+        <div class="content">
+            <p><b></b></p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div>
+            <h1><img src="I&I CEO.jpeg" alt="CEO Image"></h1>
+        </div>
+        <h1 style="font-family: 'Arial', sans-serif; color: cyan; font-size: 24px; line-height: 1.5; text-align: center; margin: 20px 0;">
+            We, at I and I Media, are a well-established agency specializing in videography and photography services, located at Kasoa, Korkrobite. With a strong focus on corporate video production, product demo videos, commercial video production, company introduction videos, event coverage and real estate photography, we aim to cater for individuals, small business owners and event planners in the Kasoa area and beyond. Our business will operate through both online and physical channels, ensuring convenience and accessibility for our customers.
+        </h1>
+        
+        
+        <div class="our_team">
+            <div class="team_member">
+                <div class="member_img">
+                    <img src="I AND I LOGO.jpeg" alt="Team Member">
+                    <div class="social_media">
+                        <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                        <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                        <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                <h3>KOFI # USERNAME</h3>
+                <span>CEO</span>
+                <p>
+                    .</p>
+            </div>
+            <div class="team_member">
+                <div class="member_img">
+                    <img src="I&I PHOTOGRAPHY.jpeg" alt="Team Member">
+                    <div class="social_media">
+                        <div class="text">Apply Now</div>
+                    </div>
+                </div>
+                <h3>I&I PHOTOGRAPHY</h3>
+                <span></span>
+                <p>Photography is not just about taking pictures; 
+                    it's about telling a story. At I and I AGENCY, 
+                we believe in the art of visual storytelling. Every click of the shutter is an opportunity to convey emotions, narrate tales, and freeze moments in time. Whether it's a portrait session, a family gathering, or a special event, our photographers are adept at crafting visual stories that resonate with the heart and soul..</p>
+            </div>
+            <div class="team_member">
+                <div class="member_img">
+                    <img src="I&I VIDEOGRAPHY.jpeg" alt="Team Member">
+                    <div class="social_media">
+                        <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                        <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                        <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                <h3>I&I VIDEOGRAPHY EXPERT</h3>
+                <span></span>
+                <p>At I and I AGENCY, we believe in the power of visual storytelling. Every video is an opportunity to tell a unique story, evoke emotions, and create an immersive experience. Our videographers are storytellers at heart, 
+                    combining technical expertise with artistic flair to produce videos that resonate with authenticity and captivate audiences..</p>
+            </div>
+            <div class="team_member">
+                <div class="member_img">
+                    <img src="I&I FRAMES.jpeg" alt="Team Member">
+                    <div class="social_media">
+                        <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                        <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                        <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                <h3>FrameWorks</h3>
+                <span></span>
+                <p>A portrait is not just a photograph; it's an experience frozen in time. 
+                    Our portrait sessions are designed to bring out the best in you, capturing your personality, style, and spirit. Whether it's a professional headshot, a family portrait, or a creative session, we ensure a comfortable and enjoyable experience that results in exquisite portraits you'll be proud to showcase.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer_top">
+            <div class="footer_item footer_item_1">
+                <div class="footer_inner">
+                    <h3>From Our Blog</h3>
+                    <p class="title">
+                        <span></span>
+                    </p>
+                    <p class="title">
+                        <span></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var images = ["I&I TOP.jpeg", "I AND I LOGO.jpeg", "I&I FRAMES.jpeg"];
+        var currentImageIndex = 0;
+
+        function startImageRotation() {
+            setInterval(changeImage, 3000); // Change image every 3 seconds
+        }
+
+        function changeImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            var topImage = document.getElementById("TopImage");
+            topImage.src = images[currentImageIndex];
+        }
+    </script>
+</body>
+</html>
